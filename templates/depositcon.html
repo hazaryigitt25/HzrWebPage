@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <form method="post">
+        <div class="jumbotron text-center">
+            <h3>Confirmation Page</h3>
+            <hr>
+            <p>Are You Confirming Deposit {{ session["amount"] }}$?</p>
+            <a href="/deposit" class="btn btn-danger">No</a>
+            <button type="submit" class="btn btn-primary" style="text-align:right;">Yes</button>
+        </div>
+    </form>
+{% endblock %}

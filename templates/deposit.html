@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+{% from 'includes/formhelpers.html' import render_field  %}
+<div class="jumbotron text-center">
+    <h2>Deposit</h2>
+    <hr>
+    <form method="post">
+        {{ render_field(form.amount)}}
+        <a href="/manage" class="btn btn-danger">Back</a>
+        <button type="submit" class="btn btn-info" style="text-align:right;">Deposit</button>
+        
+    </form>
+</div>
+{% endblock %}

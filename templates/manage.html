@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h3>WELCOME, {{ session["name"] }}</h3>
+<hr>
+<div class="jumbotron text-center-right">
+    <h4>Informations</h4>
+    <div style="text-align:end;">
+        <a href="/deposit" class="btn btn-dark">Deposit Money</a>
+    </div>
+    <p>ID: {{ session["id"] }}</p>
+    <div style="text-align:end;">
+        <a href="/withdraw" class="btn btn-dark">Withdraw Money</a>
+    </div>
+    <p>IBAN: {{ session["iban"] }}</p>
+    <div style="text-align:end;">
+        <a href="/transfer" class="btn btn-dark">Transfer Money</a>
+    </div>
+    <p>BALANCE: {{ session["balance"] }}$</p>
+    <div style="text-align:end;">
+        <a href="/change_password" class="btn btn-dark">Change Password</a>
+    </div>
+    <br><br>
+    <div style="text-align:end;">
+        <a href="/delete" class="btn btn-dark">Delete Account</a>
+    </div>
+    
+    
+</div>
+
+    
+{% endblock %}

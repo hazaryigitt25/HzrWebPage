@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+{% from 'includes/formhelpers.html' import render_field  %}
+<div class="jumbotron text-center">
+    <h2>Delete Account</h2>
+    <hr>
+    <p>Are You Sure About Leaving US? :(</p>
+    <form method="post">
+        <a href="/manage" class="btn btn-danger">No, I Won't</a>
+        <button type="submit" class="btn btn-info" style="text-align:right;">Yes</button>
+        
+    </form>
+</div>
+{% endblock %}
